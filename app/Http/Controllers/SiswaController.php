@@ -7,7 +7,6 @@ use App\Models\Kelas;
 use App\Models\Siswa;
 use GdImage;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 use Milon\Barcode\Facades\DNS2DFacade;
@@ -45,8 +44,8 @@ class SiswaController extends Controller
 
     public function import(Request $request)
     {
+        Excel::import(new SiswaImport,$request->file('file'));
 
-        Excel::import(new SiswaImport,  $request->file('file'));
-        return redirect()->route('admin.siswa');
+        return redirect()->route('admin.siswa')->with('status', 'success')->with('message', 'Berhasil Mengimport Siswa');
     }
 }

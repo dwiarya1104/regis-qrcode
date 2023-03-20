@@ -1,24 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-    <style>
-        @media only screen and (max-width: 600px) {
-            #reader {
-                width: 350px;
-            }
-        }
 
-
-
-
-        @media only screen and (min-width: 600px) {
-            #reader {
-                width: 350px;
-            }
-        }
     </style>
     <center>
-        <div id="reader" style="width:600px"></div>
+        <div id="reader" class="col-8" ></div>
     </center>
 
     <div class="justfy-content-center align-items-center text-center">
@@ -26,7 +12,7 @@
         </div>
     </div>
 
-    <input type="hidden" name="result" id="result">
+    <input type="hidden" name="result" id="result">`
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
