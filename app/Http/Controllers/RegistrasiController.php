@@ -20,9 +20,10 @@ class RegistrasiController extends Controller
 
     public function preview($barcode)
     {
-        $preview = Siswa::where('barcode', $barcode)->first();
+        $preview = Siswa::where('nis', $barcode)->first();
         return view('admin.preview', compact('preview'));
     }
+
     public function submit_preview(Request $request)
     {
         $submit = Registrasi::create([

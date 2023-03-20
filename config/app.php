@@ -174,8 +174,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Milon\Barcode\BarcodeServiceProvider::class
-
+        Milon\Barcode\BarcodeServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
     ],
 
     /*
@@ -231,8 +232,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
-        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class
-
+        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];

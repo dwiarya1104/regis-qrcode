@@ -10,17 +10,15 @@ class Siswa extends Model
     use HasFactory;
 
     protected $fillable = [
+        'nis',
         'nama',
-        'barcode',
-        'kelas_id',
+        'kelas',
         'pendamping',
-        'foto_barcode'
+        'jenis_kelamin',
+        'foto_barcode',
+        'tiket'
     ];
 
-    public function kelas()
-    {
-        return $this->belongsTo(Kelas::class);
-    }
     public function registrasi()
     {
         return $this->hasOne(Registrasi::class);

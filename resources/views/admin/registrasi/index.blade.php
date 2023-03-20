@@ -16,7 +16,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $regis->siswa->nama }}</td>
-                    <td>{{ $regis->siswa->kelas->kelas }}</td>
+                    <td>{{ $regis->siswa->kelas }}</td>
                     <td>{{ $regis->jam_hadir }}</td>
                     <td> <span
                             class="badge bg-{{ $regis->status == 'hadir' ? 'success' : 'danger' }}">{{ $regis->status }}</span>
