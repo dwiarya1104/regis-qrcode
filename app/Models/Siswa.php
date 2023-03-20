@@ -12,12 +12,11 @@ class Siswa extends Model
     protected $fillable = [
         'nis',
         'nama',
-        // 'barcode',
-        // 'kelas_id',
         'kelas',
         'pendamping',
         'jenis_kelamin',
-        // 'foto_barcode'
+        'foto_barcode',
+        'tiket'
     ];
 
     public function registrasi()

@@ -19,9 +19,9 @@
                         </button>
 
                     </div>
-                    <div class="col-6 d-flex justify-content-end">
+                    {{-- <div class="col-6 d-flex justify-content-end">
                         <a href="{{ route('admin.create.siswa') }}" class="btn btn-primary">+ Tambah Siswa</a>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <table class="table table-striped" id="table1">
@@ -29,7 +29,11 @@
                         <tr>
                             <th>No.</th>
                             <th>Nama</th>
+                            <th>Nis</th>
                             <th>Kelas</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Pendamping</th>
+                            <th style="text-align:center">Tiket</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,7 +41,11 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $siswa->nama }}</td>
+                                <td>{{ $siswa->nis }}</td>
                                 <td>{{ $siswa->kelas }}</td>
+                                <td>{{ $siswa->jenis_kelamin == 'L' ? 'Laki-Laki' : 'Perempuan'}}</td>
+                                <td>{{ $siswa->pendamping }}</td>
+                                <td style="text-align:center"><a href="{{'/storage/'. $siswa->tiket }}" target="_blank" style="color: black"><i class="bi bi-download" style="font-size: 1.2rem"></i></a></td>
                             </tr>
                         @endforeach
                     </tbody>

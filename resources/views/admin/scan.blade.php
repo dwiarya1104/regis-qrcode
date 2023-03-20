@@ -19,17 +19,17 @@
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        // $('#result').val('test');
         function onScanSuccess(decodedText, decodedResult) {
             // alert(decodedText);
             $('#result').val(decodedText);
             let id = decodedText;
             var url = "{{ route('admin.preview', ':id') }}";
             url = url.replace(':id', id);
-
+            console.log(id);
 
             var loading = document.getElementById('loading')
             loading.removeAttribute('hidden')
+            
             html5QrcodeScanner.clear().then(_ => {
                 var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
                 $.ajax({

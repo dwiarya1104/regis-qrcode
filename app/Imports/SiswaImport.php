@@ -20,5 +20,6 @@ class SiswaImport implements ToModel
             'jenis_kelamin' => $row[2],
             'kelas' => $row[3],
         ]);
+
     }
 }
