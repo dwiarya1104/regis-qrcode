@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\SiswaImport;
 use App\Models\Kelas;
 use App\Models\Siswa;
 use GdImage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 use Milon\Barcode\Facades\DNS2DFacade;
 
 class SiswaController extends Controller
@@ -38,5 +41,12 @@ class SiswaController extends Controller
             'foto_barcode' => $filename
         ]);
         $store_barcode = Storage::disk('public')->put($filename, base64_decode(DNS2DFacade::getBarcodePNG("$siswa->barcode", "QRCODE")));
+    }
+
+    public function import(Request $request)
+    {
+
+        Excel::import(new SiswaImport,  $request->file('file'));
+        return redirect()->route('admin.siswa');
     }
 }

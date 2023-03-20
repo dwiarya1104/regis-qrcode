@@ -17,27 +17,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Kelas::create([
-            'kelas' => 'XII RPL',
-        ]);
-        Kelas::create([
-            'kelas' => 'XII AKL1',
-        ]);
-        Kelas::create([
-            'kelas' => 'XII AKL2',
-        ]);
-        Kelas::create([
-            'kelas' => 'XII OTKP1',
-        ]);
-        Kelas::create([
-            'kelas' => 'XII OTKP2',
-        ]);
-        Kelas::create([
-            'kelas' => 'XII BDP1',
-        ]);
-        Kelas::create([
-            'kelas' => 'XII BDP2',
-        ]);
+        // Kelas::create([
+        //     'kelas' => 'XII RPL',
+        // ]);
+        // Kelas::create([
+        //     'kelas' => 'XII AKL1',
+        // ]);
+        // Kelas::create([
+        //     'kelas' => 'XII AKL2',
+        // ]);
+        // Kelas::create([
+        //     'kelas' => 'XII OTKP1',
+        // ]);
+        // Kelas::create([
+        //     'kelas' => 'XII OTKP2',
+        // ]);
+        // Kelas::create([
+        //     'kelas' => 'XII BDP1',
+        // ]);
+        // Kelas::create([
+        //     'kelas' => 'XII BDP2',
+        // ]);
 
 
         User::create([

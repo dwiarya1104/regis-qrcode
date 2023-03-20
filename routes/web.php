@@ -31,7 +31,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/siswa', [SiswaController::class, 'index'])->name('admin.siswa');
     Route::get('/create-siswa', [SiswaController::class, 'create'])->name('admin.create.siswa');
     Route::post('/store-siswa', [SiswaController::class, 'store'])->name('admin.store.siswa');
-    
+    Route::post('/siswa/import_excel', [SiswaController::class, 'import'])->name('admin.import.siswa');
+
     Route::get('/registrasi', [RegistrasiController::class, 'index'])->name('admin.registrasi');
     Route::get('/scan', [RegistrasiController::class, 'scan'])->name('admin.scan');
     Route::post('/submit-preview', [RegistrasiController::class, 'submit_preview'])->name('admin.submit-preview');
